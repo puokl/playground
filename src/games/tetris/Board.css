@@ -1,0 +1,26 @@
+@media (max-width: 768px) {
+  .grid-mobile {
+    grid-template-rows: repeat(20, calc(45vw / 12));
+    grid-template-columns: repeat(12, calc(45vw / 12));
+    width: calc(45vw + 13px);
+  }
+}
+
+/* For mobile screens md*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .grid-md {
+    grid-template-rows: repeat(20, calc(30vw / 12));
+    grid-template-columns: repeat(12, calc(30vw / 12));
+    width: calc(30vw + 13px);
+  }
+}
+
+/* For LG screens and above lg-xl-2xl*/
+@media (min-width: 1024px) {
+  .grid-lg {
+    grid-template-rows: repeat(20, calc(25vw / 12));
+    grid-template-columns: repeat(12, calc(25vw / 12));
+    width: calc(25vw + 13px);
+    margin-top: 2.5rem;
+  }
+}
