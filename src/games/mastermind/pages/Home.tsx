@@ -1,25 +1,3 @@
-// import React from "react";
-// import { Link } from "react-router-dom";
-
-// function Home() {
-//   return (
-//     <div className="flex flex-col items-center justify-center h-screen px-4 text-white bg-slate-400">
-//       <div className="mb-16 text-4xl font-bold text-center">
-//         Welcome to Phuoc's Playground!
-//       </div>
-//       <p className="mb-12 text-lg text-center">This is mastermind</p>
-//       <Link
-//         to="/mastermind/play"
-//         className="flex items-center justify-center w-40 h-10 p-2 text-white transition duration-300 bg-teal-600 rounded-md hover:bg-teal-700"
-//       >
-//         PLAY
-//       </Link>
-//     </div>
-//   );
-// }
-
-// export default Home;
-
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -92,7 +70,7 @@ const Home: React.FC = () => {
       <div className="lg:pl-6">
         <img
           src="/master.jpeg"
-          alt="Description of your image"
+          alt="Mastermind board"
           className="mt-4 max-h-60 lg:ml-4 lg:mt-0"
         />
       </div>

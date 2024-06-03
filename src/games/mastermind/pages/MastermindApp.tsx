@@ -5,7 +5,6 @@ import {
   getColorClassDark,
   pegColors,
 } from "../utils/colorUtil";
-import Rules from "../components/Rules";
 import Modal from "../components/Modal";
 import HomeIcon from "../../../components/HomeIcon";
 
@@ -14,7 +13,7 @@ type Attempt = {
   feedback: { correctPosition: number; correctColor: number };
 };
 
-const Game: React.FC = () => {
+const MastermindApp: React.FC = () => {
   const MAXATTEMPT: number = 10;
   const CODELENGTH: number = 4;
 
@@ -23,8 +22,6 @@ const Game: React.FC = () => {
   const [currentAttemptNumber, setCurrentAttemptNumber] = useState<number>(0);
   const [isGameOver, setIsGameOver] = useState<boolean>(false);
   const [hasWon, setHasWon] = useState<boolean>(false);
-  const [isGameInProgress, setIsGameInProgress] = useState<boolean>(false);
-  const [selectedPegs, setSelectedPegs] = useState<number[]>([]);
   const [currentPeg, setCurrentPeg] = useState(0);
   const [attempts, setAttempts] = useState<Attempt[]>(
     Array(MAXATTEMPT).fill({
@@ -123,7 +120,6 @@ const Game: React.FC = () => {
       newGuess[pegIndex] = selectedColor;
       setCurrentGuess(newGuess);
       setCurrentPeg((prevPeg) => prevPeg + 1);
-      setSelectedPegs([...selectedPegs, pegIndex + 1]);
     } else {
       console.log("Please select a specific peg manually.");
     }
@@ -343,4 +339,4 @@ const Game: React.FC = () => {
     </div>
   );
 };
-export default Game;
+export default MastermindApp;

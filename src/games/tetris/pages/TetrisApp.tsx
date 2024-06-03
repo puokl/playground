@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Board from "../components/Board";
 import Display from "../components/Display";
 import StartButton from "../components/StartButton";
@@ -9,8 +9,6 @@ import { useInterval } from "../hooks/useInterval";
 import { useGameStatus } from "../hooks/useGameStatus";
 import MobileControls from "../components/MobileControls";
 import { BoardProps } from "../types/types";
-import { Link } from "react-router-dom";
-import { RiHome2Line } from "react-icons/ri";
 import HomeIcon from "../../../components/HomeIcon";
 
 type TetrisProps = {};
@@ -166,12 +164,6 @@ const TetrisApp: React.FC<TetrisProps> = () => {
       onKeyDown={(e) => move(e)}
       onKeyUp={keyUp}
     >
-      {/* <Link
-        to="https://mastermind-topaz.vercel.app"
-        className="absolute z-10 text-black top-4 right-4 bg-slate-200 rounded-xl"
-      >
-        <RiHome2Line size={32} />
-      </Link> */}
       <HomeIcon />
       <div className="flex items-center justify-center flex-grow-[4] ">
         <Board board={board as BoardProps} />
